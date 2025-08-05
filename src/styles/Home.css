@@ -1,0 +1,162 @@
+/* src/styles/Home.css (Setelah Perbaikan Jarak) */
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* [PERBAIKAN] Padding diubah agar lebih seimbang di layar besar */
+  padding: 2rem 6rem; 
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease-in-out;
+  gap: 2rem;
+}
+
+.home-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.greeting {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  /* [PERBAIKAN] Menambah margin bawah untuk ritme vertikal */
+  margin-bottom: 0.5rem; 
+}
+
+.name {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1; /* [PERBAIKAN] Dibuat lebih rapat */
+  font-weight: 800;
+  color: var(--text-primary);
+  /* [PERBAIKAN] Mereset margin atas h1 dan mengatur margin bawah */
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.name .highlight {
+  background-image: linear-gradient(to top, var(--accent) 40%, transparent 40%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0 4px;
+}
+
+.typing-effect-container {
+  font-size: clamp(1.5rem, 3vw, 2rem); /* [PERBAIKAN] Dibuat responsif */
+  color: var(--text-secondary);
+  font-weight: 600;
+  /* [PERBAIKAN] Menyesuaikan margin bawah */
+  margin-bottom: 2rem; 
+  min-height: 3rem;
+}
+
+.typed-cursor {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.bio {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  /* [PERBAIKAN] Menyesuaikan margin bawah sebelum tombol sosial media */
+  margin-bottom: 2.5rem; 
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: column; /* Memaksa susunan vertikal */
+  align-items: flex-start; /* Rata kiri di desktop */
+  gap: 1.5rem; /* Jarak antara baris sosial media dan baris tombol */
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.social-links svg {
+  width: 28px;
+  height: 28px;
+}
+
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  right: -6%;
+  min-width: 45%;
+  height: 50vh;
+  position: relative;
+}
+
+.home-image canvas {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  transform: scale(1.3) translateY(30px);
+}
+
+/* Wadah untuk tombol-tombol CTA */
+.cta-buttons {
+  display: flex; /* Cukup flex, tidak perlu inline-flex */
+  gap: 1rem;
+}
+
+.cta-button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem;
+  padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none;
+  font-weight: 600; font-size: 1rem; text-align: center;
+  transition: all 0.3s ease; border: 2px solid var(--accent);
+}
+
+.cta-button.primary { background-color: var(--accent); color: var(--bg-primary); }
+.cta-button.primary:hover { background-color: var(--accent-hover); border-color: var(--accent-hover); transform: translateY(-3px); }
+.cta-button.secondary { background-color: transparent; color: var(--accent); }
+.cta-button.secondary:hover { background-color: var(--accent); color: var(--bg-primary); transform: translateY(-3px); }
+
+
+/* --- Media Query untuk Responsif di Mobile --- */
+@media (max-width: 992px) {
+  .home-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    /* [PERBAIKAN] Mengurangi padding di tablet agar tidak terlalu kosong */
+    padding: 5rem 3rem; 
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .home-image {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Sesuaikan tinggi untuk mobile */
+    right: auto;
+    top: auto;
+    transform: none; /* Hapus transform */
+  }
+  .home-image canvas {
+    transform: scale(1.5) translateY(30px); /* Kembalikan transform lama */
+  }
+  .cta-buttons {
+    justify-content: center; /* Tombol jadi di tengah di mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 4rem 1.5rem; /* [PERBAIKAN] Padding untuk layar ponsel */
+  }
+  /* Aturan .name dan .home-image img dihapus karena tidak lagi relevan */
+}

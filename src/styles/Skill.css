@@ -1,0 +1,149 @@
+/* src/styles/Skill.css (Versi Tabulasi) */
+
+.skill-section {
+  padding: 5rem 2rem;
+  background-color: var(--bg-primary);
+}
+
+.skill-section .section-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.skill-section .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+/* Kontainer utama untuk tab dan grid */
+.skill-container-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Barisan Tombol Tab Horizontal */
+.skill-tabs {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(136, 146, 176, 0.2);
+}
+
+.skill-tabs .tab-button {
+  flex: 1;
+  padding: 1.25rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.skill-tabs .tab-button:hover {
+  background-color: rgba(100, 255, 218, 0.05);
+  color: var(--text-primary);
+}
+
+.skill-tabs .tab-button.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Area Konten Tab */
+.skill-tab-content {
+  padding: 2.5rem;
+  min-height: 350px;
+}
+
+/* Grid untuk kartu skill */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 2rem;
+  animation: gridFadeIn 0.5s ease-in-out;
+}
+
+@keyframes gridFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 3D Flip Card Styling (Tidak berubah) --- */
+.skill-card {
+  background-color: transparent;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.7s cubic-bezier(0.5, 1.2, 0.5, 1.2);
+  transform-style: preserve-3d;
+}
+
+.skill-card:hover .skill-card-inner {
+  transform: rotateY(180deg);
+}
+
+.skill-card-front,
+.skill-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.1);
+}
+
+.skill-card-front {
+  color: var(--text-primary);
+}
+
+.skill-card-back {
+  background: var(--accent);
+  color: var(--bg-primary);
+  transform: rotateY(180deg);
+}
+
+.skill-card svg {
+  width: 50%;
+  height: 50%;
+}
+
+.skill-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}

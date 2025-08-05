@@ -1,0 +1,210 @@
+/* src/styles/Contact.css (Revisi Final) */
+
+.contact-section {
+  padding: 5rem 2rem;
+  background-color: var(--bg-primary);
+}
+
+.contact-section .section-title {
+  text-align: center; font-size: 3rem; font-weight: 700; color: var(--text-primary);
+  margin-bottom: 3rem; position: relative;
+}
+.contact-section .section-title::after {
+  content: ''; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%);
+  width: 100px; height: 4px; background-color: var(--accent); border-radius: 2px;
+}
+
+.contact-layout {
+  display: flex;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.column-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.column-title svg {
+  color: var(--accent);
+}
+
+/* Kolom Kiri */
+.connect-column {
+  flex: 1;
+}
+.social-links-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--surface);
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+.social-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.social-icon {
+  background-color: var(--bg-primary);
+  padding: 0.75rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-icon svg {
+  color: var(--accent);
+  width: 28px;
+  height: 28px;
+}
+.social-text {
+  display: flex;
+  flex-direction: column;
+}
+.social-handle {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+.social-handle strong {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+.social-handle span {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.social-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Kolom Kanan */
+.form-column {
+  flex: 1.5;
+}
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Agar bisa mengisi .form-row */
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--bg-primary);
+  border: 1px solid rgba(136, 146, 176, 0.3);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+}
+.form-group textarea {
+  resize: vertical;
+}
+.submit-button {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+}
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 300px; /* Sesuaikan tinggi agar pas */
+  border: 2px dashed var(--accent);
+  border-radius: 8px;
+  padding: 2rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.success-message h3 {
+  color: var(--accent);
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.error-message {
+  color: #ff6b6b; /* Warna merah untuk error */
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- Media Query untuk Responsif di Mobile --- */
+@media (max-width: 992px) {
+  .contact-layout {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0; /* Hapus gap agar margin-bottom .form-group bekerja */
+  }
+}

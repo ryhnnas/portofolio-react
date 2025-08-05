@@ -1,0 +1,87 @@
+/* src/index.css */
+
+/* === GLOBAL COLOR VARIABLES DEFINITION === */
+:root {
+  /* DARK MODE "Sage & Stone" */
+  --bg-primary: #F5F7F9;
+  --surface: #FFFFFF;
+  --text-primary: #1E2328;
+  --text-secondary: #69737F;
+  --accent: #84A98C;
+  --accent-hover: #6A8A71;
+
+  /* Transisi halus untuk semua perubahan warna */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+[data-theme='dark'] {
+  /* LIGHT MODE "Sage & Stone" */
+  --bg-primary: #1E2328;
+  --surface: #2D3339;
+  --text-primary: #F0F2F5;
+  --text-secondary: #A6ACB3;
+  --accent: #84A98C;
+  --accent-hover: #6A8A71;
+}
+
+/* Sedikit reset CSS dasar untuk konsistensi */
+body {
+  margin: 0;
+  background-color: var(--bg-primary); /* Set background utama body */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* <-- CUKUP TAMBAHKAN BARIS INI */
+}
+
+/* === Tombol Kembali ke Atas === */
+.back-to-top-button {
+  position: fixed; /* Mengambang di layar */
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999; /* Di bawah header tapi di atas konten lain */
+  
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  
+  border: none;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+  transition: all 0.3s ease;
+  
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.back-to-top-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(100, 255, 218, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
