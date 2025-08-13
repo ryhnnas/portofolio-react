@@ -1,5 +1,3 @@
-/* src/styles/Skill.css (Versi Tabulasi) */
-
 .skill-section {
   padding: 5rem 2rem;
   background-color: var(--bg-primary);
@@ -36,7 +34,6 @@
   overflow: hidden;
 }
 
-/* Barisan Tombol Tab Horizontal */
 .skill-tabs {
   display: flex;
   background-color: rgba(0, 0, 0, 0.1);
@@ -66,13 +63,11 @@
   border-bottom-color: var(--accent);
 }
 
-/* Area Konten Tab */
 .skill-tab-content {
   padding: 2.5rem;
   min-height: 350px;
 }
 
-/* Grid untuk kartu skill */
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -85,7 +80,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- 3D Flip Card Styling (Tidak berubah) --- */
+/* --- 3D Flip Card Styling --- */
 .skill-card {
   background-color: transparent;
   width: 100%;

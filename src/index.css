@@ -1,8 +1,6 @@
-/* src/index.css */
-
-/* === GLOBAL COLOR VARIABLES DEFINITION === */
+/* Global Color Variabels Definition */
 :root {
-  /* DARK MODE "Sage & Stone" */
+  /* LIGHT MODE "Sage & Stone" */
   --bg-primary: #F5F7F9;
   --surface: #FFFFFF;
   --text-primary: #1E2328;
@@ -10,24 +8,36 @@
   --accent: #84A98C;
   --accent-hover: #6A8A71;
 
+  /* Variabel khusus untuk Header di Light Mode */
+  --header-bg: rgba(255, 255, 255, 0.7); 
+  --header-border-color: rgba(30, 35, 40, 0.2); 
+  --header-link-color: var(--text-secondary); 
+  --header-link-hover-color: var(--text-primary);
+
   /* Transisi halus untuk semua perubahan warna */
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 [data-theme='dark'] {
-  /* LIGHT MODE "Sage & Stone" */
+  /* DARK MODE "Sage & Stone" */
   --bg-primary: #1E2328;
   --surface: #2D3339;
   --text-primary: #F0F2F5;
   --text-secondary: #A6ACB3;
   --accent: #84A98C;
   --accent-hover: #6A8A71;
+
+  /* Variabel khusus untuk Header di Dark Mode */
+  --header-bg: rgba(30, 35, 40, 0.7); 
+  --header-border-color: rgba(166, 172, 179, 0.2); 
+  --header-link-color: var(--text-secondary); 
+  --header-link-hover-color: var(--text-primary);
 }
 
 /* Sedikit reset CSS dasar untuk konsistensi */
 body {
   margin: 0;
-  background-color: var(--bg-primary); /* Set background utama body */
+  background-color: var(--bg-primary); 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -40,15 +50,15 @@ body {
 }
 
 html {
-  scroll-behavior: smooth; /* <-- CUKUP TAMBAHKAN BARIS INI */
+  scroll-behavior: smooth; 
 }
 
 /* === Tombol Kembali ke Atas === */
 .back-to-top-button {
-  position: fixed; /* Mengambang di layar */
+  position: fixed; 
   bottom: 2rem;
   right: 2rem;
-  z-index: 999; /* Di bawah header tapi di atas konten lain */
+  z-index: 999; 
   
   width: 50px;
   height: 50px;
