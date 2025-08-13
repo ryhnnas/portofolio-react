@@ -4,7 +4,7 @@
 }
 
 .contact-section .section-title {
-  text-align: center; font-size: 3rem; font-weight: 700; color: var(--text-primary);
+  text-align: center; font-size: 2.5rem; font-weight: 700; color: var(--text-primary);
   margin-bottom: 3rem; position: relative;
 }
 .contact-section .section-title::after {
@@ -15,7 +15,7 @@
 .contact-layout {
   display: flex;
   gap: 3rem;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--text-primary);
   margin-top: 0;
   margin-bottom: 2rem;

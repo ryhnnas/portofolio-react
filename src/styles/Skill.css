@@ -5,7 +5,7 @@
 
 .skill-section .section-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 3rem;
@@ -26,7 +26,7 @@
 
 /* Kontainer utama untuk tab dan grid */
 .skill-container-card {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   background-color: var(--surface);
   border-radius: 12px;
@@ -42,12 +42,12 @@
 
 .skill-tabs .tab-button {
   flex: 1;
-  padding: 1.25rem 1rem;
+  padding: 1rem 1rem;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-secondary);
   transition: all 0.3s ease;
   border-bottom: 3px solid transparent;
@@ -70,7 +70,7 @@
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 2rem;
   animation: gridFadeIn 0.5s ease-in-out;
 }

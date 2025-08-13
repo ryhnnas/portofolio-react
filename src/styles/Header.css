@@ -7,8 +7,8 @@
   background-color: var(--surface);
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%; 
   padding: 0; 
   overflow: hidden;
@@ -22,8 +22,8 @@
 }
 
 .site-logo {
-  width: 200%;
-  height: 204%;
+  width: 220%;
+  height: 205%;
   object-fit: cover; 
   object-position: center;
 }

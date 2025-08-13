@@ -5,7 +5,7 @@
 
 .project-section .section-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 3rem;
@@ -26,7 +26,7 @@
 
 /* Kartu Utama Untuk Wadah Tab */
 .project-container-card {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   background-color: var(--surface);
   border-radius: 12px;
@@ -43,7 +43,7 @@
 
 .project-tabs .tab-button {
   flex: 1;
-  padding: 1.25rem 1rem;
+  padding: 1rem 1rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -66,7 +66,7 @@
 
 /* Area Konten Tab */
 .project-tab-content {
-  padding: 2.5rem;
+  padding: 2rem;
   min-height: 400px;
 }
 

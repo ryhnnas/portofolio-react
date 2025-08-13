@@ -51,6 +51,7 @@ body {
 
 html {
   scroll-behavior: smooth; 
+  font-size: 13px;
 }
 
 /* === Tombol Kembali ke Atas === */
