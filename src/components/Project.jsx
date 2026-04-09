@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import '../styles/Project.css';
 
 // --- Impor Gambar Proyek ---
-import projectImage1 from '../assets/ecommerce.png';
-import projectImage2 from '../assets/todo.png';
-import projectImage3 from '../assets/respmknn.png';
+import projectImage1 from '../assets/nexera.png';
+import projectImage2 from '../assets/sipdana.png';
+import projectImage3 from '../assets/ecommerce.png';
 
 // --- ikon yang kita gunakan ---
 import { TbWorldWww } from "react-icons/tb";
@@ -16,31 +16,31 @@ import { FaGithub, FaExternalLinkAlt, FaReact } from "react-icons/fa";
 const projectsData = [
   {
     id: 1,
-    title: "Trolley",
+    title: "Nexera",
     image: projectImage1,
-    description: "Trolley adalah sebuah platform e-commerce berbasis web yang dibangun menggunakan stack MERN (MySQL, Express.js, React, Node.js). Proyek ini memungkinkan pengguna untuk mendaftar, membeli produk, dan bahkan meng-upgrade akun mereka untuk membuka toko sendiri dan menjual produk mereka.",
-    technologies: ["React", "Node", "MySQL"],
-    githubLink: "https://github.com/ryhnnas/Trolley",
+    description: "Nexera POS adalah sistem kasir berbasis web yang dibangun menggunakan React (TSX), Node.js, dan Supabase (PostgreSQL). Platform ini dirancang untuk mengoptimalkan operasional bisnis melalui fitur manajemen stok, dasbor ringkasan penjualan yang dinamis, serta integrasi AI Chatbot untuk analisis performa penjualan secara real-time.",
+    technologies: ["React", "Node", "PostgreSQL"],
+    githubLink: "https://github.com/fikriash/nexera",
     demoLink: "#",
     category: "web",
   },
   {
     id: 2,
-    title: "Todo List Web",
+    title: "Sip Dana",
     image: projectImage2,
-    description: "To-Do List full-stack yang sederhana namun tangguh, dibangun menggunakan React.js untuk frontend, Node.js (Express.js) untuk backend, dan MySQL sebagai database.",
+    description: "SipDana adalah aplikasi manajemen keuangan pribadi yang dikembangkan menggunakan stack React, Node.js, dan MySQL. Proyek ini berfokus pada akurasi data finansial, memungkinkan pengguna untuk mencatat pemasukan dan pengeluaran secara terstruktur, serta menyajikan visualisasi anggaran bulanan untuk membantu pengambilan keputusan keuangan yang lebih baik.",
     technologies: ["React", "Node", "MySQL"],
-    githubLink: "https://github.com/ryhnnas/Full-Stack-To-Do-List-Application",
+    githubLink: "https://github.com/ryhnnas/Sip-Dana-v2",
     demoLink: "#",
     category: "web",
   },
   {
     id: 3,
-    title: "Dashboard Resep Masakan",
+    title: "Trolley",
     image: projectImage3,
-    description: "Platform web interaktif yang memungkinkan pengguna menjelajahi berbagai resep lezat, melihat detail bahan dan langkah-langkah, serta mencari resep berdasarkan nama atau bahan. Aplikasi ini juga dilengkapi dengan fitur kategori yang memudahkan pengguna menemukan resep sesuai jenis hidangan.",
+    description: "Trolley adalah sebuah platform e-commerce berbasis web yang dibangun menggunakan stack MERN (MySQL, Express.js, React, Node.js). Proyek ini memungkinkan pengguna untuk mendaftar, membeli produk, dan bahkan meng-upgrade akun mereka untuk membuka toko sendiri dan menjual produk mereka.",
     technologies: ["React", "Node", "MySQL"],
-    githubLink: "https://github.com/ryhnnas/Full-Stack-Food-Recipe-Application",
+    githubLink: "https://github.com/ryhnnas/Trolley",
     demoLink: "#",
     category: "web",
   },
